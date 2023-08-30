@@ -1,0 +1,2 @@
+#!/bin/bash
+(echo -e ".\n.." \ ls -1ap | grep -v '/$' | sort -d | sed '/^[0-9]/ s/\(.*[0-9]\)\(.*\)/\2\1/'\ ls -1ap | grep '/$' | sort -d) | paste -sd'\n' - | tr -d '\n' | sed 's/$/\n/'
